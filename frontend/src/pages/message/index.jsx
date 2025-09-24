@@ -216,14 +216,14 @@ export default function Message() {
 
                                                         {msg.senderId === authState.user.userId._id ?
 
-                                                            <div style={{ display: "flex", justifyContent: "end" }}>
+                                                            <div style={{ display: "flex", justifyContent: "flex-end" }}>
 
                                                                 <p className={styles.message_style} >{msg.message}</p>
 
                                                             </div>
 
 
-                                                            : <div style={{ display: "flex", justifyContent: "start" }}>
+                                                            : <div style={{ display: "flex", justifyContent: "flex-start" }}>
 
                                                                 <p className={styles.message_style2} >{msg.message}</p>
 

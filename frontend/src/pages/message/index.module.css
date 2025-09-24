@@ -4,7 +4,7 @@
 .homeContainer {
     display: flex;
     /* background-color: #ECEBF3; */
-    justify-content: end;
+    justify-content: flex-end;
     overflow-y: hidden;
     /* height: 100vh; */
 }
