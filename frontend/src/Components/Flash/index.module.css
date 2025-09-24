@@ -1,0 +1,8 @@
+.fixed {
+    background-color: rgba(5, 6, 82, 0.97);
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    
+}

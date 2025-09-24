@@ -1,0 +1,59 @@
+.container {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    height: 100%;
+    z-index: 2;
+    border-bottom: 1px solid rgb(190, 189, 189);
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items:  center;
+    padding-inline: 1rem;
+  
+    
+}
+
+.mainContainer_left {
+    font-weight: bolder;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.mainContainer_right > div.buttonJoin {
+    margin-top: 10px;
+    cursor: pointer;
+    user-select: none;
+    background-color: rgb(238, 121, 238);
+    padding-inline: 3px;
+    padding-block: 4px; 
+    border-radius: 5px;
+    width: 110px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+
+
+.inputFields {
+    padding-inline: 0.7rem;
+    padding-block: 0.5rem;
+    outline: none;
+    border-radius: 0.2rem;
+    border: 1px solid rgb(170, 170, 170);
+    background-color: rgb(243, 240, 216);
+}
+
+
+
+
+
+@media screen and (max-width : 600px) {
+
+    .showName {
+        display: none;
+    }
+}

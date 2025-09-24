@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.homeContainer {
+    display: flex;
+    /* background-color: #ECEBF3; */
+    justify-content: end;
+    overflow-y: hidden;
+    /* height: 100vh; */
+}
+
+
+
+
+
+.homeContainer_feedContainer {
+    border-right: 1px solid gray;
+    background: rgba(238, 236, 236, 0.735);
+    flex: 0.2;
+
+}
+
+
+
+.right_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.5s;
+
+
+}
+
+.right_container:hover {
+    transform: scale(1.02);
+    border-bottom: 1px solid black;
+}
+
+
+.profilePicture {
+    width: 3rem;
+    border-radius: 50%;
+
+}
+
+.ankit_bhai {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-inline: 0.5rem;
+    padding-block: 0.3rem;
+    cursor: pointer;
+    background-color: rgba(251, 250, 255, 0.451);
+    border-bottom: 1px solid black;
+
+}
+
+.send_message {
+    display: flex;
+    gap: 0.7rem;
+    padding-inline: 0.5rem;
+    padding-block: 0.3rem;
+}
+
+.inputFields {
+    flex: 1;
+    padding-inline: 1.3rem;
+    padding-block: 0.8rem;
+    outline: none;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(170, 170, 170);
+    background-color: rgb(255, 255, 255);
+}
+
+
+.button {
+
+    background: rgb(2, 61, 110);
+    color: azure;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    padding-inline: 1rem;
+    padding-block: 0.3rem;
+    border-radius: 0.5rem;
+
+}
+
+
+.homeContainer_extraContainer {
+    flex: 0.6;
+}
+
+
+
+.message_container {
+    padding-inline: 1rem;
+    padding-top: 1rem;
+    height: 72vh;
+    width: 100%;
+    overflow-y: scroll;
+    background: rgb(255, 255, 255);
+}
+
+.message_container::-webkit-scrollbar {
+    display: none;
+}
+
+
+.message_style {
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    background-color: rgb(80, 120, 136);
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.message_style2 {
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    background-color: rgb(215, 215, 215);
+    color: color;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.default_message_container {
+    height: 89.8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(65deg, lightBlue, lightPink);
+
+    animation: slideUp 1s ease;
+}
+
+.sidebar {
+    flex: 0.2;
+}
+
+
+
+.container_box {
+
+    position: relative;
+
+    animation: slideDown 1s ease-out forwards;
+
+
+
+}
+
+@keyframes slideDown {
+
+    from {
+        transform: translateY(-100%);
+        /* end at normal position */
+        /* opacity: 1; */
+    }
+
+    to {
+        transform: translateY(0);
+        /* start from bottom */
+        /* opacity: 0; */
+    }
+
+
+}
+
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        /* start from bottom */
+        /* opacity: 1; */
+    }
+
+    to {
+        transform: translateY(0);
+        /* end at normal position */
+        /* opacity: 0; */
+    }
+}
+
+
+@media screen and (max-width : 600px) {
+
+    .homeContainer .sidebar {
+        display: none;
+        flex: 0;
+    }
+
+    .homeContainer {
+        flex-direction: column;
+
+    }
+
+    .default_message_container {
+        margin-inline: 0.5rem;
+        padding-block: 1rem;
+        height: 40vh;
+    }
+
+
+
+    .homeContainer_feedContainer {
+        height: 100svh;
+    }
+}
+
+
+
+
+@media screen and (max-width : 900px) {
+    .sidebar {
+        display: none;
+
+    }
+
+}

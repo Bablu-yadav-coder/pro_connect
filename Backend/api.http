@@ -1,0 +1,91 @@
+POST http://localhost:8000/register HTTP/1.1
+content-type : application/json
+
+
+{
+    "username" : "bky",
+    "password" : "9729555053",
+    "email" : "bky@gmail.com",
+    "name" : "B ydv"
+}
+
+###
+
+
+POST http://localhost:8000/login HTTP/1.1
+content-type : application/json
+
+{
+    "password" : "9729555053",
+    "email" : "bablu@gmail.com"   
+}
+
+###
+
+POST http://localhost:8000/login HTTP/1.1
+content-type : application/json
+
+{
+    "password" : "9729555053",
+    "email" : "bky@gmail.com"   
+}
+
+
+
+###
+
+POST http://localhost:8000/get_user_and_profile HTTP/1.1
+content-type : application/json
+
+
+{
+    "token" : "0853a8a130b944c95847d37e44bdadaedbae7a84d7cba3e65e560ecc39e71eae"  
+}
+
+###
+
+POST http://localhost:8000/update_profile_data HTTP/1.1
+content-type : application/json
+
+
+{
+  "token": "a9cd282f66e023710654a216b576944e54e89e2e30f909b2f9ebf5a8a97d8d88",
+  "bio": "",
+  "currentPost" : "SoftWare Engineer at Microsoft",
+  "pastWork": [
+    {
+      "position": "SoftWare Engineer",
+      "company": "Microsoft",
+      "years": "2+ years"
+    }
+  ],
+  "education": [
+    {
+      "school": "IIT Delhi",
+      "degree": "B.Tech",
+      "fieldOfStudy": "2018-2022"
+    }
+  ]
+}
+
+
+
+###
+
+GET http://localhost:8000/user/get_all_users
+
+
+###
+
+GET http://localhost:8000/posts
+
+
+###
+
+DELETE http://localhost:8000/posts
+
+
+{
+  "token" : "8b44c5202bf7e98c897999635364158a0b862e7fbc47d6ddaa476e083b487943",
+  "postId" : "68aec78961dbe53570ee76a3"
+}

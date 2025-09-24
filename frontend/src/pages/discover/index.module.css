@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.card_container {
+    width: 80%;
+    display:  flex;
+    background-color: white;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0,0.1);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.card_container:hover {
+ transform: scale(1.02);
+}
+
+.card_container > img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+
+.search_profile {
+    display:  flex;
+    justify-content: center;
+
+    margin-bottom : 1rem;
+    gap: 1rem;
+    position:  relative;
+}
+
+.search_profile > input{
+    outline: none;
+    font-size: 1rem;
+    border: 1px solid rgb(211, 210, 210);
+    padding-inline : 1rem;
+    padding-block : 0.5rem;
+    border-radius : 4px;
+ }
+
+
+ .search_profile  button {
+    width: fit-content;
+    padding-inline: 1rem;
+    padding-block: 0.2rem;
+    cursor: pointer;
+    gap: 1rem;
+    outline: none;
+    border: 1px solid rgb(211, 210, 210);
+    background-color: cornflowerblue;
+    border-radius : 4px
+}
+
+
+
+@media screen and (max-width : 600px) {
+    .container {
+        width: 100%;
+    }
+    .card_container {
+        width: 95%;
+        height: 90px;
+        padding: 0.5rem;
+    }
+
+    .card_container>img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+}

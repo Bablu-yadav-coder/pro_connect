@@ -1,0 +1,247 @@
+.main_container {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 60%;
+    /* background-color: white; */
+    margin-top: 1rem;
+}
+
+.container > div {
+     background-color: white;
+     border-radius: 0.8rem;
+     border: 1px solid rgb(211, 208, 208);
+}
+
+.background_container {
+    position: relative;
+}
+
+.backDrop {
+    height: 11em;
+    width: 100%;
+    background: url(https://png.pngtree.com/thumb_back/fh260/back_our/20190619/ourmid/pngtree-merchants-join-the-win-win-future-poster-image_134089.jpg);
+    background-size: cover;
+    background-position: auto;
+     border-radius: 0.8rem 0.8rem 0 0;
+
+}
+
+.background_container>img {
+    height: 10em;
+    width: 10em;
+    border-radius: 50%;
+    position: absolute;
+    top: 5rem;
+    left: 2.5rem;
+}
+
+
+.backDrop_overlay {
+    height: 10em;
+    width: 10em;
+    border-radius: 50%;
+    position: absolute;
+    top: 5rem;
+    left: 2.5rem;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    color: wheat;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.backDrop_overlay:hover {
+    background-color: rgb(11, 11, 11);
+    opacity: 0.5;
+
+}
+
+
+.update_Btn_Container {
+    display: flex;
+    width: fit-content;
+    margin: 10px;
+}
+
+
+
+.connectBtn {
+
+    color: rgb(233, 231, 231);
+    background-color: rgb(21, 83, 176);
+    padding: 6px;
+    padding-inline: 1rem;
+    cursor: pointer;
+    border-radius: 9px;
+    outline: none;
+    border: 0;
+
+
+}
+
+
+
+.connectBtn {
+
+    color: rgb(233, 231, 231);
+    background-color: rgb(21, 83, 176);
+
+    padding-inline: 1rem;
+    padding-block: 0.6rem;
+    cursor: pointer;
+    border-radius: 9px;
+    outline: none;
+    border: 0;
+    font-size: 1rem;
+
+
+}
+
+.updateUser {
+    width: fit-content;
+    background: 0;
+    outline: none;
+    border: 0;
+    font-size: 1.5rem;
+    padding-inline: 1.1rem;
+}
+
+
+.profileDetails {
+    padding-inline : 1.5rem;  
+
+}
+.profileDetails textarea {
+    width: fit-content;
+    border: 0;
+    background: none;
+    outline: none;
+    font-family: "Poppins" !important;
+    font-size: 1rem;
+}
+
+
+.addWork {
+    /* border: 1px dotted gray; */
+    width: fit-content;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.addWork > svg {
+    width:1.5rem;;
+}
+
+
+
+#commentsContainer {
+    position: fixed;
+    width: 100svw;
+    height: 100svh;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+
+
+.allCommentContainer {
+    width: 40vw;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.allCommentContainer >button {
+    width: 100%;
+}
+
+
+.inputFields {
+    padding-inline: 1.3rem;
+    padding-block: 0.8rem;
+    outline: none;
+    width: 100%;
+    border-radius: 0.8rem;
+    border: 1px solid rgb(170, 170, 170);
+}
+
+.workHistory_container {
+    padding-inline : 1rem;
+    padding-block : 0.5rem;
+     margin-block: 0.7rem;
+}
+
+
+
+.workHistory {
+    width: 100%;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.addBtn {
+    width: 100%;
+    background-color: rgba(32, 3, 75, 0.83);
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    color: rgb(253, 253, 253);
+    outline: none;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 0.3rem;
+}
+
+.addBtn:hover {
+    transform: scale(1.02);
+}
+
+
+
+.delete_profileData {
+    cursor: pointer;
+}
+
+
+@media screen and  ( max-width : 600px){
+    .main_container {
+        width: 100svw;
+    }
+
+    .container { 
+        width: 90svw;
+    }
+    .update_Btn_Container {
+        flex-direction: column;
+    }
+
+    .connectBtn {
+        width: 50%;
+        margin-top: 4px;
+        margin-left: 8px;
+    }
+    .allCommentContainer {
+        width: 90svw;
+    }
+}
