@@ -5,7 +5,6 @@ const initialState = {
     onlineUsers: [],
     messages: [],
     selectedUser : null,
-    likeNotification : [],
 }
 
 const socketSlice = createSlice({
@@ -27,16 +26,6 @@ const socketSlice = createSlice({
             state.selectedUser =  action.payload
         },
 
-        setLikeNotification:(state,action)=>{
-
-            console.log(action.payload)
-
-            if(action.payload.type === 'like'){
-                state.likeNotification.push(action.payload);
-            }else if(action.payload.type === 'dislike'){
-                state.likeNotification = state.likeNotification.filter((item)=> item.userId !== action.payload.userId);
-            }
-        }
 
     },
 

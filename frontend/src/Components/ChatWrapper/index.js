@@ -1,4 +1,4 @@
-import { setLikeNotification, setOnlineUsers } from '@/config/redux/reducer/socketReducer';
+import {setOnlineUsers } from '@/config/redux/reducer/socketReducer';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -20,11 +20,6 @@ export default function ChatWrapper({ children }) {
         dispatch(setOnlineUsers(onlineUsers))
       })
 
-      // socketio.on('notification', (notification) => {
-
-      //   console.log(" notification recived")
-      //   dispatch(setLikeNotification(notification));
-      // });
 
 
       return () => {
@@ -33,7 +28,7 @@ export default function ChatWrapper({ children }) {
 
 
     }
-  }, [authState.user, dispatch, setLikeNotification]);
+  }, [authState.user, dispatch]);
 
 
 

@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
 import { reset } from '@/config/redux/reducer/authReducer';
 
-import toggleLamp from "@/components/toggleLamp";
 
 export default function NavBarComponent() {
 
@@ -29,9 +28,6 @@ export default function NavBarComponent() {
 
                 </div>
 
-
-
-                <toggleLamp />
 
 
 

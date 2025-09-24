@@ -21,9 +21,6 @@ export default function App({ Component, pageProps }) {
     <Provider store={store}>
       <ChatWrapper>
         <Component {...pageProps} setFlash={setFlash} />
-
-        
-
       </ChatWrapper>
     </Provider>
 
