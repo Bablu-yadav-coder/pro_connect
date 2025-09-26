@@ -48,8 +48,7 @@ export const registerUser = createAsyncThunk(
                 password: user.password
             })
 
-            console.log(response.data)
-
+        
             return thunkAPI.fulfillWithValue(response.data);
 
         }
@@ -98,8 +97,6 @@ export const getAllUsers = createAsyncThunk(
 
             const response = await clientServer.get("/user/get_all_users");
 
-
-            console.log(response.data)
             return thunkAPI.fulfillWithValue(response.data)
 
 
