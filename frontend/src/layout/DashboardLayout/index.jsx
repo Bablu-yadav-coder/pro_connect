@@ -25,7 +25,7 @@ export default function DashboardLayout({ children, setFlash }) {
             router.push("/");
         }
         dispatch(setTokenIsThere());
-    });
+    },[]);
 
 
 

@@ -487,9 +487,6 @@ export default function index() {
                                 <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap" }} >
 
 
-
-                                    {console.log(postState.post)}
-
                                     {postState.post.filter(post => post.userId._id == authState.user.userId._id).map((post) => {
                                         return (
 
