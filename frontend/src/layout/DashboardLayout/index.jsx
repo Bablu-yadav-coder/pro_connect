@@ -76,7 +76,7 @@ export default function DashboardLayout({ children, setFlash }) {
 
 
                         <h3>Top Profiles</h3>
-                        {authState.user && authState.user && 
+                        {authState.user && authState.all_profiles_fetched && 
                             authState.all_users.filter(user => user.userId._id !== authState.user.userId._id).map((user, idx) => {
 
                                 return (

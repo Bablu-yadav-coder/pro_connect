@@ -27,7 +27,6 @@ export default function LoginComponent({ setFlash }) {
 
 
   const handleRegister = () => {
-    console.log("registering....");
 
     dispatch(registerUser({ username, password, email, name }));
     setFlash({ message: authState.message.message, severity: "success", open: true })
@@ -36,7 +35,7 @@ export default function LoginComponent({ setFlash }) {
 
   const handleLogin = async () => {
     await dispatch(loginUser({ email, password }));
-    console.log(authState)
+    
     // setFlash({ message: "Welcome back to your account!", severity: "success", open: true })
 
   }
@@ -103,8 +102,11 @@ export default function LoginComponent({ setFlash }) {
             <div>
               <p className={styles.cardLeft_heading}>  {userLoginMethod ? "Welcome Back to your Acccout!" : "Create a account"}</p>
 
-              <p style={{ marginTop: "8px", textAlign: "center", color: authState.isError ? "red" : "green" }}>{authState.message.message}</p>
+             {authState.message && 
+              <p style={{ marginTop: "8px", textAlign: "center", color: authState.isError ? "red" : "green" }}>{authState.message}</p>
 
+
+             }
 
 
               <div className={styles.inputContainers}>

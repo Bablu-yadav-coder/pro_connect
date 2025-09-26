@@ -77,11 +77,6 @@ export default function Dashboard({ setFlash }) {
 
   const handleCreatePost = async () => {
 
-    console.log(fileContent);
-    console.log(postContent);
-
-
-
     await dispatch(createPost({ file: fileContent, body: postContent }));
     setPostContent("");
     setFileContent(null);

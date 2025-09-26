@@ -25,7 +25,6 @@ const uploads = multer({storage : storage});
 
 
 
-
 router.route("/new").post(uploads.single("media"),createPost);
 
 

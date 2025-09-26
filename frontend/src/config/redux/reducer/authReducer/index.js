@@ -47,9 +47,8 @@ const authSlice =  createSlice({
         builder 
             .addCase(loginUser.pending, (state) => {
                 state.isLoading = true;
-                state.message  = {
-                    message : "knocking the door...."
-                }
+                state.message  = "knocking the door...."
+                
             })
 
             .addCase(loginUser.fulfilled, (state, action) => {
@@ -57,34 +56,33 @@ const authSlice =  createSlice({
                 state.isLoading = false;
                 state.isSuccess = true;
                 state.loggedIn = true;
-                state.message =  {
-                    message : "Welcome back to your profile"
-                }
+                state.message = "Welcome back!"
+                
             })
 
             .addCase(loginUser.rejected, (state,action) => {
                 state.isLoading = false;
                 state.isError = true;
-                state.message = action.payload;
+                state.message = action.payload.message;
 
             })
 
             .addCase(registerUser.pending, (state) => {
                 state.isLoading = true;
-                state.message = "registering you";
+                state.message = "Registering you";
             })
 
             .addCase(registerUser.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.isError = false;
                 state.isSuccess = true;
-                state.message  = action.payload
+                state.message  = action.payload.message
             })
 
             .addCase(registerUser.rejected, (state, action) => {
                 state.isLoading = false;
                 state.isError = true;
-                state.message =   action.payload;
+                state.message =   action.payload.message;
             })
 
 
@@ -109,7 +107,7 @@ const authSlice =  createSlice({
             })
             
             .addCase(getConnectionRequest.rejected, (state, action) =>{
-                state.message = action.payload
+                state.message = action.payload.message
             })
 
 

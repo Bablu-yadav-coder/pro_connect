@@ -8,7 +8,6 @@ export const loginUser = createAsyncThunk(
 
     async (user, thunkAPI) => {
 
-        console.log(user)
 
         try {
 
@@ -16,9 +15,6 @@ export const loginUser = createAsyncThunk(
                 email: user.email,
                 password: user.password,
             });
-
-
-            console.log("token ", response.data.token)
 
             if (response.data.token) {
                 localStorage.setItem("token", response.data.token);
@@ -43,18 +39,18 @@ export const registerUser = createAsyncThunk(
 
     async (user, thunkAPI) => {
 
-        console.log(user);
-
         try {
 
-            const request = await clientServer.post("/register", {
+            const response = await clientServer.post("/register", {
                 email: user.email,
                 username: user.username,
                 name: user.name,
                 password: user.password
             })
 
-            // return request.data;
+            console.log(response.data)
+
+            return thunkAPI.fulfillWithValue(response.data);
 
         }
         catch (error) {
@@ -102,6 +98,8 @@ export const getAllUsers = createAsyncThunk(
 
             const response = await clientServer.get("/user/get_all_users");
 
+
+            console.log(response.data)
             return thunkAPI.fulfillWithValue(response.data)
 
 

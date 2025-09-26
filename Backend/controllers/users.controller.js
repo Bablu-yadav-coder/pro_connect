@@ -89,7 +89,7 @@ export const register = async (req, res) => {
     await profile.save();
 
 
-    return res.json({ message: "User registerd" });
+    return res.status(201).json({ message: "User registerd Please Login!" , user});
 
   } catch (error) {
     return res.status(400).json({ message: error.message });
@@ -112,7 +112,7 @@ export const login = async (req, res) => {
     const user = await User.findOne({ email });
 
     if (!user) {
-      return res.status(400).json({ "message": "user not exists" });
+      return res.status(400).json({ message : "user not exists" });
     }
 
     const match =await bcrypt.compare(password, user.password);
@@ -127,7 +127,7 @@ export const login = async (req, res) => {
 
    
 
-    return res.json({  token : token});
+    return res.status(200).json({  token : token, message : "Welcome Back!"});
 
 
   } catch (err) {
