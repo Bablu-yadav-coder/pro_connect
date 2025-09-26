@@ -45,10 +45,10 @@ export default function LoginComponent({ setFlash }) {
   useEffect(() => {
     if (authState.loggedIn) {
       router.push("/dashboard");
-      setFlash({ message: authState.message.message, severity: "success", open: true })
+      setFlash({ message: authState.message, severity: "success", open: true })
 
     } else if (authState.isError) {
-      setFlash({ message: authState.message.message, severity: "warning", open: true })
+      setFlash({ message: authState.message, severity: "warning", open: true })
 
     }
 
