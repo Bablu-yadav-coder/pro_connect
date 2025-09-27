@@ -214,7 +214,6 @@ export const acceptConnection = createAsyncThunk(
 
     async (user, thunkAPI) => {
 
-        console.log(user)
 
 
         try {
@@ -245,7 +244,7 @@ export const searchUser = createAsyncThunk(
 
     async (user, thunkAPI) => {
 
-        console.log(user.username)
+    
 
         try {
             const response = await clientServer.get("/user/get_user_based_on_username", {

@@ -12,7 +12,6 @@ export const getAllMessages = createAsyncThunk(
                 token : localStorage.getItem("token")
             })
 
-            console.log(response.data.message)
 
 
         return thunkAPI.fulfillWithValue(response.data.message);

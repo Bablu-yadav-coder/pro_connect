@@ -23,7 +23,6 @@ export const sendMessage = async (req, res) => {
 
     }
 
-    console.log(senderId);
 
 
     let conversation = await Conversation.findOne({
@@ -56,8 +55,7 @@ export const sendMessage = async (req, res) => {
 
     const receiverSocketId = getReceiverSocketId(receiverId);
 
-    console.log("receiverSocketId :  ", receiverSocketId);
-
+    
 
     if (receiverSocketId) {
         io.to(receiverSocketId).emit("newMessage", newMessage)
@@ -65,8 +63,7 @@ export const sendMessage = async (req, res) => {
 
 
 
-    console.log("message send successfully")
-
+   
     res.status(200).json({
         message: "establish conversation",
         success: true,

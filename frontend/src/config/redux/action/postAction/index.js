@@ -86,7 +86,6 @@ export const deletePost = createAsyncThunk(
             });
 
 
-            console.log(response.data);
 
             return thunkAPI.fulfillWithValue(response.data);
 
@@ -187,7 +186,6 @@ export const deleteComment = createAsyncThunk(
 
     async (user, thunkAPI) => {
 
-        console.log(user);
         try {
 
             const response = await clientServer.delete("/posts/comments", {

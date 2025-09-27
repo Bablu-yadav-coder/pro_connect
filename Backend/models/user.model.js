@@ -42,9 +42,8 @@ const userSchema = mongoose.Schema({
 userSchema.post("findOneAndDelete", async (deletedUser) => {
     if (deletedUser) {
 
-        const p = await Profile.deleteOne({ userId: deletedUser._id })
+       await Profile.deleteOne({ userId: deletedUser._id })
 
-        console.log("profile deleted : ", p)
     }
 })
 

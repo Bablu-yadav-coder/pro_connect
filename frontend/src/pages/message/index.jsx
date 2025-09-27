@@ -147,9 +147,7 @@ export default function Message() {
 
                                                 dispatch(setSelectedUser(user))
 
-                                                console.log(scrollToTop)
-
-
+                                        
 
                                             }}
                                             onDoubleClick={() => dispatch(setSelectedUser(null))}

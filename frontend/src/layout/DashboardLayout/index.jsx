@@ -30,8 +30,7 @@ export default function DashboardLayout({ children, setFlash }) {
 
 
     const handleNewPost = async () => {
-        console.log(postMedia);
-        console.log(postContent);
+       
 
         await dispatch(createPost({ file: postMedia, body: postContent }))
 

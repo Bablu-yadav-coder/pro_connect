@@ -184,8 +184,7 @@ export default function Dashboard({ setFlash }) {
 
                               setPost_id(post._id)
 
-                              console.log(post._id)
-
+                             
 
                               // await dispatch(deletePost({ token: localStorage.getItem("token"), postId: post._id }));
                               // dispatch(getAllPost());

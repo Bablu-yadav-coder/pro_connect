@@ -29,7 +29,7 @@ export default function LoginComponent({ setFlash }) {
   const handleRegister = () => {
 
     dispatch(registerUser({ username, password, email, name }));
-    setFlash({ message: authState.message.message, severity: "success", open: true })
+    setFlash({ message: authState.message, severity: "success", open: true })
 
   }
 

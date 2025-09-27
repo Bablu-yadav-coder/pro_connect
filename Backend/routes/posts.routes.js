@@ -27,14 +27,6 @@ const uploads = multer({storage : storage});
 
 router.route("/new").post(uploads.single("media"),createPost);
 
-
-router.route("/hello").post(uploads.single('media'), (req, res) => {
-    console.log(req.file)
-    console.log(req.body)
-
-    res.send(req.body)
-})
-
 router.route("/").get(getAllPosts);
 router.route("/").delete(deletePost);
 router.route("/newComment").post(addNewComment);

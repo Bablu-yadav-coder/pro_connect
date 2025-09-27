@@ -130,7 +130,7 @@ export default function index() {
 
 
     const deleData = async (data_id) => {
-        console.log(data_id)
+        
         const res = await clientServer.post("/posts/delete_post_data", {
             id: data_id,
             token: localStorage.getItem("token")
@@ -141,13 +141,12 @@ export default function index() {
     }
 
     const handleDeletePastWork = async (data_id) => {
-        console.log(data_id)
+     
         const res = await clientServer.post("/posts/delete_pastwork", {
             id: data_id,
             token: localStorage.getItem("token")
         })
 
-        console.log(res);
         await dispatch(getAboutUser({ token: localStorage.getItem("token") }))
 
     }
